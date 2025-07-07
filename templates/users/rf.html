@@ -1,0 +1,50 @@
+
+{% extends 'users/userbase.html' %}
+{% block contents %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+#
+
+
+ <section id="intro">
+
+    <div class="intro-text">
+<!--        <div class="container" style="margin-top:-200px;">-->
+
+      <p><h3 align="center" style="color:green;font-weight:bold;">Classification Results</h3></p>
+      <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+        <center>
+            <h3>Random Forest Results</h3>
+        <table>
+            <tr><td>Accuracy</td><td>{{accuracy}}</td> </tr>
+            <tr><td>Precision</td><td>{{precision}}</td> </tr>
+            <tr><td>Recall</td><td>{{recall}}</td> </tr>
+            <tr><td>F1_Score</td><td>{{f1score}}</td> </tr>
+            <tr><td>roc_auc</td><td>{{roc_auc}}</td> </tr>
+
+        </table>
+        </center>
+    </div>
+  </section>
+
+
+
+
+{% endblock %}
+

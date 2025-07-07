@@ -1,0 +1,24 @@
+<!-- pair_plots.html -->
+{% extends 'users/userbase.html'%}
+{% block contents %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Quality Pair Plots</title>
+    <!-- Include the Plotly library from CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Air Quality Pair Plots</h1>
+    <!-- Display the interactive plot -->
+    <div id="plot_div">{{ plot_html | safe }}</div>
+</body>
+</html>
+
+<!-- Add this script to make the plot interactive -->
+<script>
+    var plotDiv = document.getElementById('plot_div');
+    eval(plotDiv.getElementsByTagName('script')[0].innerHTML);
+
+</script>
+{% endblock %}
