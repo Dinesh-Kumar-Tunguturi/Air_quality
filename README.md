@@ -52,10 +52,12 @@ Air_quality_prediction/
 ## 📸 Sample Output Screenshots
 
 ### 🎯 Prediction Page
-![Prediction Page](images/prediction_result.png)
+![image](https://github.com/user-attachments/assets/0382a991-a76f-499b-95a1-2ab4b991486e)
+
 
 ### 📊 AQI Bar Chart
-![AQI Chart](images/air_pollution_chart.png)
+![AQI Chart]![image](https://github.com/user-attachments/assets/563868a6-c331-4f1d-8c99-757d6f9cdf50)
+
 
 *(Ensure you save your actual screenshots in the `/images` folder for this to work)*
 
@@ -67,9 +69,10 @@ python -m venv venv
 
 ### ✅ 1. Clone the Repository
 
-```bash
+<pre>```bash
 git clone https://github.com/yourusername/air-quality-prediction.git
-cd air-quality-prediction
+cd air-quality-prediction</pre>
+
 
 pip install -r requirements.txt
 pip install pandas scikit-learn seaborn matplotlib plotly django joblib
@@ -85,6 +88,7 @@ AQI Category (Good, Moderate, Poor, etc.)
 City and Date
 
 ## 📌 Sample Preprocessing Code
+<pre>
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -99,12 +103,15 @@ y = df['AQI_Category']
 model = RandomForestClassifier()
 model.fit(X, y)
 joblib.dump(model, 'model.pkl')
+  </pre>
 
 ## ✅ Sample Prediction
+<pre>
 import joblib
 model = joblib.load('model.pkl')
 result = model.predict([[80, 110, 25, 7, 0.5, 30]])
 print("Predicted AQI Category:", result[0])
+  </pre>
 ## 📦 Dependencies (requirements.txt)
 
 Django>=4.0
@@ -119,14 +126,6 @@ This project is licensed for educational and non-commercial research use only.
 
 
 
----
-### 🔍 Pollution Level Visualization
-
-![Pollution Graph](images/air_pollution_chart.png)
-
-### 📉 Prediction Result Page
-
-![Prediction Result](images/prediction_result.png)
 
 
 
